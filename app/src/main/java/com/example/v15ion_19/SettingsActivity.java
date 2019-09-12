@@ -1,6 +1,8 @@
 package com.example.v15ion_19;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -11,16 +13,23 @@ import androidx.preference.PreferenceFragmentCompat;
 public class SettingsActivity extends AppCompatActivity {
 
     TextView view;
+    TextView view2;
     SeekBar bar;
+    Button plus;
+    Button minus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        view = (TextView)findViewById(R.id.changeFont);
-        bar = (SeekBar)findViewById(R.id.seekBar);
-        
+        // demo change font and tex
+        view = (TextView) findViewById(R.id.changeFont);
+        view2 = (TextView) findViewById(R.id.changeFont);
+        bar = (SeekBar) findViewById(R.id.seekBar);
+        plus = (Button) findViewById(R.id.plusButton);
+        minus = (Button) findViewById(R.id.minusButton);
+
 
         bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
@@ -38,5 +47,23 @@ public class SettingsActivity extends AppCompatActivity {
 
             }
         });
+
+        plus.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                view2.setTextSize(view2.getTextSize() + 3);
+            }
+        });
+
+        minus.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                view2.setTextSize(view2.getTextSize() - 3);
+            }
+        });
+
+
     }
-    }
+}
