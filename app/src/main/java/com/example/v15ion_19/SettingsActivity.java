@@ -30,7 +30,10 @@ public class SettingsActivity extends AppCompatActivity {
         plus = (Button) findViewById(R.id.plusButton);
         minus = (Button) findViewById(R.id.minusButton);
 
-
+        
+        // TODO: Set text size for all activities instead of the demo text
+        
+        // slider bar
         bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -47,7 +50,8 @@ public class SettingsActivity extends AppCompatActivity {
 
             }
         });
-
+        
+        // plus button
         plus.setOnClickListener(new Button.OnClickListener() {
 
             @Override
@@ -55,7 +59,8 @@ public class SettingsActivity extends AppCompatActivity {
                 view2.setTextSize(view2.getTextSize() + 3);
             }
         });
-
+        
+        // minus button
         minus.setOnClickListener(new Button.OnClickListener() {
 
             @Override
