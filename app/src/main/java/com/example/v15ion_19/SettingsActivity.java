@@ -23,7 +23,7 @@ public class SettingsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // demo change font and tex
+        // demo change font and text
         view = (TextView) findViewById(R.id.changeFont);
         view2 = (TextView) findViewById(R.id.changeFont);
         bar = (SeekBar) findViewById(R.id.seekBar);
