@@ -68,7 +68,8 @@ public class SettingsActivity extends AppCompatActivity {
                 view2.setTextSize(view2.getTextSize() - 3);
             }
         });
-
+        
+        // TODO: add high contrast mode
 
     }
 }
