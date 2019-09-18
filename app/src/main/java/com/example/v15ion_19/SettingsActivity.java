@@ -30,6 +30,7 @@ public class SettingsActivity extends AppCompatActivity {
         plus = findViewById(R.id.plusButton);
         minus = findViewById(R.id.minusButton);
 
+
         
         // TODO: Set text size for all activities instead of the demo text
         
@@ -37,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
         bar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                view.setTextSize(Float.valueOf(i));
+                view.setTextSize(i);
                 MainActivity.edtTexttoSpeak.setTextSize(20);
             }
 
@@ -57,7 +58,9 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                view2.setTextSize(view2.getTextSize() + 3);
+                //view2.setTextSize(view2.getTextSize() + 3);
+                HomeDashboard.settings.setTextSize(15);
+
             }
         });
         
@@ -66,7 +69,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                view2.setTextSize(view2.getTextSize() - 3);
+                view2.setTextSize((float) view2.getTextSize());
             }
         });
         

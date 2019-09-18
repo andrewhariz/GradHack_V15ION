@@ -10,7 +10,7 @@ import com.example.v15ion_19.R;
 
 public class HomeDashboard extends Activity {
 
-    Button settings;
+    static Button settings;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
