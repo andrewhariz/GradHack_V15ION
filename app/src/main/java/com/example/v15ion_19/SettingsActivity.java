@@ -1,5 +1,6 @@
 package com.example.v15ion_19;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -20,7 +21,9 @@ public class SettingsActivity extends AppCompatActivity {
     Button plus;
     Button minus;
     Button settings;
+    Button backButton;
     LinearLayout layout;
+    LinearLayout mainLayout;
     Button backgroundButton;
 
     @Override
@@ -37,6 +40,8 @@ public class SettingsActivity extends AppCompatActivity {
         settings = findViewById(R.id.settings);
         layout = findViewById(R.id.settingsLayout);
         backgroundButton = findViewById(R.id.backgroundButton);
+        mainLayout = findViewById(R.id.layout);
+        backButton = findViewById(R.id.backButton);
 
 
         
@@ -88,8 +93,16 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                layout.setBackgroundColor(Color.BLACK);
+                mainLayout.setBackgroundColor(Color.BLACK);
                 view2.setTextColor(Color.GREEN);
+            }
+        });
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SettingsActivity.this, HomeDashboard.class);
+                startActivity(intent);
             }
         });
     }

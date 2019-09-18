@@ -40,8 +40,8 @@
             android:layout_height="150dp"
             android:layout_width="match_parent"
             android:layout_margin="10dp"
-            android:background="#0000cc">
             android:id="@+id/layout"
+            android:background="#0000cc">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
