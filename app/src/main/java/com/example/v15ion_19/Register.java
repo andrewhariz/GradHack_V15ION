@@ -14,7 +14,7 @@ public class Register extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
 
-        TextView login = (TextView)findViewById(R.id.lnkLogin);
+        TextView login = findViewById(R.id.lnkLogin);
         login.setMovementMethod(LinkMovementMethod.getInstance());
         login.setOnClickListener(new View.OnClickListener() {
             @Override

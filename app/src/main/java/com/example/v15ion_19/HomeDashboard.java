@@ -15,10 +15,17 @@ public class HomeDashboard extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        settings = (Button) findViewById(R.id.settings);
+        settings = findViewById(R.id.settings);
         settings.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                startActivity(new Intent(this,Settings.class));
+//                startActivity(new Intent(this,SettingsActivity.java));
+            }
+        });
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeDashboard.this, SettingsActivity.class);
+                startActivity(intent);
             }
         });
     }

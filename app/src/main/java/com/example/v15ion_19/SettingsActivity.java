@@ -24,11 +24,11 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // demo change font and text
-        view = (TextView) findViewById(R.id.changeFont);
-        view2 = (TextView) findViewById(R.id.changeFont);
-        bar = (SeekBar) findViewById(R.id.seekBar);
-        plus = (Button) findViewById(R.id.plusButton);
-        minus = (Button) findViewById(R.id.minusButton);
+        view = findViewById(R.id.changeFont);
+        view2 = findViewById(R.id.changeFont);
+        bar = findViewById(R.id.seekBar);
+        plus = findViewById(R.id.plusButton);
+        minus = findViewById(R.id.minusButton);
 
         
         // TODO: Set text size for all activities instead of the demo text
