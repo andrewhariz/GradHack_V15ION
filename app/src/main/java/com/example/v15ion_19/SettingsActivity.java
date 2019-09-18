@@ -88,7 +88,8 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                layout.setBackgroundColor(2);
+                layout.setBackgroundColor(Color.BLACK);
+                view2.setTextColor(Color.GREEN);
             }
         });
     }

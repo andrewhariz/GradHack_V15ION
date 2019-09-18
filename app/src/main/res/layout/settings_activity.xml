@@ -39,7 +39,7 @@
         android:id="@+id/backgroundButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:text="-" />
+        android:text="Background" />
 
     <TextView
         android:id="@+id/changeFont"
