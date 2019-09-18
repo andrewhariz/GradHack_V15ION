@@ -1,8 +1,10 @@
 package com.example.v15ion_19;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -17,6 +19,9 @@ public class SettingsActivity extends AppCompatActivity {
     SeekBar bar;
     Button plus;
     Button minus;
+    Button settings;
+    LinearLayout layout;
+    Button backgroundButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,9 @@ public class SettingsActivity extends AppCompatActivity {
         bar = findViewById(R.id.seekBar);
         plus = findViewById(R.id.plusButton);
         minus = findViewById(R.id.minusButton);
+        settings = findViewById(R.id.settings);
+        layout = findViewById(R.id.settingsLayout);
+        backgroundButton = findViewById(R.id.backgroundButton);
 
 
         
@@ -58,8 +66,8 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                //view2.setTextSize(view2.getTextSize() + 3);
-                HomeDashboard.settings.setTextSize(15);
+                view2.setTextSize(view2.getTextSize() + 3);
+                settings.setTextSize(15);
 
             }
         });
@@ -76,5 +84,12 @@ public class SettingsActivity extends AppCompatActivity {
         // TODO: add high contrast mode
         // black background, neon text
 
+        backgroundButton.setOnClickListener(new Button.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                layout.setBackgroundColor(2);
+            }
+        });
     }
 }
