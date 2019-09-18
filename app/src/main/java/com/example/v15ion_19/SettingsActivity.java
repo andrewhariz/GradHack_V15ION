@@ -70,6 +70,7 @@ public class SettingsActivity extends AppCompatActivity {
         });
         
         // TODO: add high contrast mode
+        // black background, neon text
 
     }
 }
