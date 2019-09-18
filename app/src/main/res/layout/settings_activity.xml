@@ -1,9 +1,10 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    >
 
     <TextView
         android:id="@+id/textView2"
@@ -11,38 +12,33 @@
         android:layout_height="wrap_content"
         android:text="Change Font Size"
         android:textSize="18dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="25dp" />
+ />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="254dp"
         android:layout_height="44dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="73dp" />
+         />
 
     <Button
         android:id="@+id/plusButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:text="+"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="156dp" />
+         />
 
     <Button
         android:id="@+id/minusButton"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:text="-"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="156dp" />
+         />
 
     <TextView
         android:id="@+id/changeFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Test Font"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="256dp" />
+         />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

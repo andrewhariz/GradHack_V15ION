@@ -18,7 +18,7 @@ public class HomeDashboard extends Activity {
         settings = findViewById(R.id.settings);
         settings.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-//                startActivity(new Intent(this,SettingsActivity.java));
+                startActivity(new Intent(HomeDashboard.this,SettingsActivity.class));
             }
         });
         settings.setOnClickListener(new View.OnClickListener() {
