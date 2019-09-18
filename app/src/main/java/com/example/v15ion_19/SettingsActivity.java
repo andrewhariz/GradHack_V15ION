@@ -38,6 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 view.setTextSize(Float.valueOf(i));
+                MainActivity.edtTexttoSpeak.setTextSize(20);
             }
 
             @Override
