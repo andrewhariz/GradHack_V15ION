@@ -17,6 +17,7 @@ public class MainActivity extends Activity implements OnInitListener {
     private TextToSpeech repeatTTS;
     Button btnspeakout;
     public static EditText edtTexttoSpeak;
+    //
 
 
 
