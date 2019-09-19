@@ -1,5 +1,6 @@
 package com.example.v15ion_19;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,7 @@ public class SettingsActivity extends AppCompatActivity {
     SeekBar bar;
     Button plus;
     Button minus;
+    Button settings;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
         bar = findViewById(R.id.seekBar);
         plus = findViewById(R.id.plusButton);
         minus = findViewById(R.id.minusButton);
+        settings = findViewById(R.id.settings);
 
 
         
@@ -59,7 +62,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //view2.setTextSize(view2.getTextSize() + 3);
-                HomeDashboard.settings.setTextSize(15);
+                settings.setTextSize(15);
 
             }
         });
@@ -69,12 +72,16 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                view2.setTextSize((float) view2.getTextSize());
+                view2.setTextSize(view2.getTextSize());
             }
         });
         
         // TODO: add high contrast mode
         // black background, neon text
 
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("AppPrefs", MODE_PRIVATE);
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putFloat("font_size", 14);
+        editor.putString("back_color", "#0000cc");
     }
 }

@@ -16,4 +16,8 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <!-- SharedPreferences -->
+    <string name="font_size">tabian.com.sharedpreferences.font_size</string>
+    <string name="back_color">tabian.com.sharedpreferences.back_color</string>
 </resources>

@@ -54,6 +54,7 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginLeft="10dp"
                     android:textColor="#ffffff"
+                    android:id="@+id/balance_text"
                     android:fontFamily="sans-serif"/>
                 <TextView
                     android:layout_width="wrap_content"
