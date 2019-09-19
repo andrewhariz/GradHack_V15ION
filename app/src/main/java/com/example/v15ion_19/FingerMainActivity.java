@@ -61,7 +61,7 @@ public class FingerMainActivity extends AppCompatActivity {
         mFingerprintImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent mainIntent = new Intent(FingerMainActivity.this,MainActivity.class);
+                Intent mainIntent = new Intent(FingerMainActivity.this, MainActivity.class);
                 startActivity(mainIntent);
             }
         });
@@ -73,26 +73,25 @@ public class FingerMainActivity extends AppCompatActivity {
         // Check 4: Lock screen is secured with atleast 1 type of lock
         // Check 5: Atleast 1 Fingerprint is registered
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
 
             fingerprintManager = (FingerprintManager) getSystemService(FINGERPRINT_SERVICE);
             keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
 
-            if(!fingerprintManager.isHardwareDetected()){
+            if (!fingerprintManager.isHardwareDetected()) {
 
                 mParaLabel.setText("Fingerprint Scanner not detected in Device");
 
 
-
-            } else if (ContextCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED){
+            } else if (ContextCompat.checkSelfPermission(this, Manifest.permission.USE_FINGERPRINT) != PackageManager.PERMISSION_GRANTED) {
 
                 mParaLabel.setText("Permission not granted to use Fingerprint Scanner");
 
-            } else if (!keyguardManager.isKeyguardSecure()){
+            } else if (!keyguardManager.isKeyguardSecure()) {
 
                 mParaLabel.setText("Add Lock to your Phone in Settings");
 
-            } else if (!fingerprintManager.hasEnrolledFingerprints()){
+            } else if (!fingerprintManager.hasEnrolledFingerprints()) {
 
                 mParaLabel.setText("You should add atleast 1 Fingerprint to use this Feature");
 
@@ -102,7 +101,7 @@ public class FingerMainActivity extends AppCompatActivity {
 
                 generateKey();
 
-                if (cipherInit()){
+                if (cipherInit()) {
 
                     FingerprintManager.CryptoObject cryptoObject = new FingerprintManager.CryptoObject(cipher);
 

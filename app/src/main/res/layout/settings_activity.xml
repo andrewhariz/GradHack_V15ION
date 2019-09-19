@@ -37,6 +37,14 @@
         android:layout_gravity="center"
          />
 
+    <Button
+        android:id="@+id/contrastButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="High Contrast"
+        android:layout_gravity="center"
+        />
+
     <TextView
         android:id="@+id/changeFont"
         android:layout_width="wrap_content"
@@ -48,7 +56,9 @@
         android:id="@+id/sharedFont"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Shared Preference font"
+        android:text="Shared Preference Test Font"
         android:layout_gravity="center"/>
+
+
 
 </LinearLayout>
