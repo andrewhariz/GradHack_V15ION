@@ -12,6 +12,7 @@ import com.example.v15ion_19.R;
 public class HomeDashboard extends Activity {
 
     static ImageButton settings;
+    static Button transfer;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,10 +23,11 @@ public class HomeDashboard extends Activity {
                 startActivity(new Intent(HomeDashboard.this,SettingsActivity.class));
             }
         });
-        settings.setOnClickListener(new View.OnClickListener() {
+        transfer = findViewById(R.id.transferButton);
+        transfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeDashboard.this, SettingsActivity.class);
+                Intent intent = new Intent(HomeDashboard.this, TransferActivity.class);
                 startActivity(intent);
             }
         });

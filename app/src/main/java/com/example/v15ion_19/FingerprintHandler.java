@@ -68,7 +68,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
         if(b == false){
 
-            paraLabel.setTextColor(ContextCompat.getColor(context, R.color.colorAccent));
+            paraLabel.setTextColor(ContextCompat.getColor(context, R.color.colorPrimary));
 
         } else {
 

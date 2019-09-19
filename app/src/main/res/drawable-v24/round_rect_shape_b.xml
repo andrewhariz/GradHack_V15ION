@@ -2,15 +2,14 @@
     android:shape="rectangle" >
 
     <gradient
-        android:angle="0"
-        android:centerColor="#2E67CB"
+        android:angle="270"
         android:endColor="#2E67CB"
-        android:startColor="#2E67CB" />
+        android:startColor="#522ECB" />
 
     <corners
-        android:bottomLeftRadius="15dp"
-        android:bottomRightRadius="15dp"
-        android:topLeftRadius="15dp"
-        android:topRightRadius="15dp" />
+        android:bottomLeftRadius="20dp"
+        android:bottomRightRadius="20dp"
+        android:topLeftRadius="20dp"
+        android:topRightRadius="20dp" />
 
 </shape>
