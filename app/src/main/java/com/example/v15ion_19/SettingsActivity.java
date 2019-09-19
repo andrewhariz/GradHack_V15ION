@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -22,10 +23,11 @@ public class SettingsActivity extends AppCompatActivity {
     SeekBar bar;
     Button plus;
     Button minus;
-    Button settings;
+    ImageButton settings;
     Button contrastButton;
     SharedPreferences sPref;
     LinearLayout mainLayout;
+    TextView dashText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class SettingsActivity extends AppCompatActivity {
         settings = findViewById(R.id.settings);
         contrastButton = findViewById(R.id.contrastButton);
         mainLayout = findViewById(R.id.mainLayout);
+        dashText = findViewById(R.id.dashText);
 
         SharedPreferences pref = getApplicationContext().getSharedPreferences("AppPrefs", MODE_PRIVATE);
         final SharedPreferences.Editor editor = pref.edit();
@@ -77,8 +80,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                //view2.setTextSize(view2.getTextSize() + 3);
-                settings.setTextSize(15);
+                view2.setTextSize(view2.getTextSize() + 3);
 
             }
         });
@@ -111,7 +113,7 @@ public class SettingsActivity extends AppCompatActivity {
 
                 String textColor = sPref.getString("font_color", "#000000");
                 int intFontColor = Color.parseColor(textColor);
-                settings.setTextColor(intFontColor);
+                dashText.setTextColor(intFontColor);
             }
         });
 

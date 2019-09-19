@@ -43,6 +43,7 @@
                     android:layout_marginLeft="5dp"
                     android:textColor="#29293d"
                     android:fontFamily="sans-serif-black"
+                    android:id="@+id/dashText"
                     />
                 <ImageButton
                     android:id="@+id/settings"
