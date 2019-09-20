@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.v15ion_19">
 
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TransferActivity"></activity>
+        <activity android:name=".MainDashboardActivity"></activity>
+        <activity android:name=".TransferActivity" />
         <activity android:name=".FingerMainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +24,9 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".HomeDashboard"></activity>
+        <activity android:name=".HomeDashboard" />
         <activity android:name=".LoginSignup" />
         <activity android:name=".Register" />
     </application>
-
-    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
 </manifest>

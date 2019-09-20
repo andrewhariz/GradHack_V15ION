@@ -20,4 +20,5 @@
     <!-- SharedPreferences -->
     <string name="font_size">tabian.com.sharedpreferences.font_size</string>
     <string name="back_color">tabian.com.sharedpreferences.back_color</string>
+    <string name="title_activity_settings2">Settings</string>
 </resources>

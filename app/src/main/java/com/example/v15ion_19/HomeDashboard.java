@@ -27,7 +27,7 @@ public class HomeDashboard extends Activity {
         transfer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeDashboard.this, TransferActivity.class);
+                Intent intent = new Intent(HomeDashboard.this, MainDashboardActivity.class);
                 startActivity(intent);
             }
         });
