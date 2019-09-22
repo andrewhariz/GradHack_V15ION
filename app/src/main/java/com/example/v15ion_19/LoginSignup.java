@@ -2,6 +2,7 @@ package com.example.v15ion_19;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import java.util.Objects;
 
 public class LoginSignup extends Activity {
 
-    EditText username,password;
+    EditText password;
     Button login;
     Button signup;
 
@@ -22,16 +23,16 @@ public class LoginSignup extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_signup);
-        username=findViewById(R.id.username);
+        final String username="josh";
         password=findViewById(R.id.password);
         login=findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener() {
             @TargetApi(Build.VERSION_CODES.KITKAT)
             @Override
             public void onClick(View view) {
-                if(Objects.equals(username.getText().toString(), "admin")&&Objects.equals(password.getText().toString(),"admin"))
+                if(Objects.equals(username, "josh")&&Objects.equals(password.getText().toString(),"0123"))
                 {
-                    startActivity(new Intent(LoginSignup.this, MainActivity.class));
+                    startActivity(new Intent(LoginSignup.this, HomeDashboard.class));
                     Toast.makeText(LoginSignup.this,"You have Authenticated Successfully",Toast.LENGTH_LONG).show();
                 }else
                 {
@@ -48,6 +49,16 @@ public class LoginSignup extends Activity {
                 startActivity(new Intent(LoginSignup.this, Register.class));
             }
         });
+
+    }
+
+    private void generate(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getApplicationContext());
+
+        View v = getLayoutInflater().inflate(R.layout.fingerprintactivity, null);
+
+        AlertDialog al = builder.create();
+        al.show();
 
     }
 
