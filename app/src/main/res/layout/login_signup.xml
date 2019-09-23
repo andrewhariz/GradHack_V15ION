@@ -4,28 +4,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.v15ion_19.MainActivity">
+    tools:context="com.example.v15ion_19.MainActivity"
+    android:background="#E9E9E9">
+
+    <TextView
+        android:id="@+id/singup"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"
+        android:text="Sign up"
+        android:layout_alignParentRight="true"
+        android:textColor="#414141" />
 
     <TextView
         android:id="@+id/username"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="Hello Josh"
-        android:textSize="32dp"
-        android:fontFamily="sans-serif-thin"
-        android:textColor="@color/text"
-        android:paddingTop="100dp"></TextView>
+        android:textSize="40dp"
+        android:fontFamily="sans-serif"
+        android:textColor="#414141"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="90dp"
+        ></TextView>
 
 
     <EditText
         android:id="@+id/password"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/username"
-        android:layout_marginTop="155dp"
+        android:layout_marginTop="165dp"
+        android:paddingVertical="10dp"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/round_rect_shape_d"
         android:hint="Password"
-        android:inputType="phone"
-        android:textAlignment="center" />
+        android:textColorHint="#414141"
+        android:inputType="numberPassword" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,19 +58,21 @@
 
         <Button
             android:id="@+id/login"
-            android:layout_width="match_parent"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:background="#3f76ff"
+            android:layout_gravity="center"
+            android:background="@drawable/round_rect_shape_c"
             android:text="Login"
             android:textColor="#fff" />
 
         <Button
             android:id="@+id/signup"
-            android:layout_width="match_parent"
+            android:layout_width="230dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="#3f76ff"
-            android:text="Signup"
+            android:layout_gravity="center"
+            android:background="@drawable/round_rect_shape_c"
+            android:text="Use fingerprint"
+            android:layout_marginTop="40dp"
             android:textColor="#fff" />
 
     </LinearLayout>
