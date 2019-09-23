@@ -4,98 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginHorizontal="15dp"
-    android:background="@color/colorBackground"
+    android:id="@+id/settingsLayout"
+    android:background="@color/colorPrimary"
     >
-
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:text="Change Font Size"
-        android:textSize="25dp" />
+        android:textSize="18dp"
+        android:layout_gravity="center"
+ />
 
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="254dp"
-        android:layout_height="54dp"
-        android:layout_gravity="center" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <Button
-            android:id="@+id/plusButton"
-            android:layout_width="50dp"
-            android:layout_height="70dp"
-            android:layout_marginHorizontal="40dp"
-            android:background="@drawable/round_rect_shape_b"
-            android:text="+"
-            android:textSize="35dp"
-            android:textColor="@color/colorBackground"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            />
+        android:layout_height="44dp"
+        android:layout_gravity="center"/>
 
-        <Button
-            android:id="@+id/minusButton"
-            android:layout_width="50dp"
-            android:layout_height="70dp"
-            android:layout_marginHorizontal="40dp"
-            android:text="-"
-            android:textSize="40dp"
-            android:textColor="@color/colorBackground"
-            android:background="@drawable/round_rect_shape_b"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            />
-    </LinearLayout>
+    <Button
+        android:id="@+id/plusButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="+"
+        android:layout_gravity="center"
+         />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/minusButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:text="-"
+        android:layout_gravity="center"
+         />
+
+    <Button
+        android:id="@+id/contrastButton"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:text="High Contrast"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/changeFont"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-        <TextView
-            android:id="@+id/changeFont"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Test Font"
-            android:layout_gravity="center"/>
-        <TextView
-            android:id="@+id/sharedFont"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Shared Preference Test Font"
-            android:layout_gravity="center"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_marginTop="20dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="High Contrast"
-            android:layout_weight="1"
-            android:textSize="35dp"
-            />
+        android:text="Test Font"
+        android:layout_gravity="center"/>
 
-        <ToggleButton
-            android:id="@+id/contrastButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:textSize="35dp"
-            android:paddingVertical="5dp"
-            android:textColor="@color/colorBackground"
-            android:background="@drawable/round_rect_shape_b"
-            ></ToggleButton>
-    </LinearLayout>
-
-
+    <TextView
+        android:id="@+id/sharedFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shared Preference Test Font"
+        android:layout_gravity="center"/>
 
 
 
