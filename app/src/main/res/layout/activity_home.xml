@@ -98,7 +98,6 @@
                                 android:text="GooglePay"
                                 android:paddingHorizontal="20dp"
                                 android:layout_marginTop="17dp"
-                                android:layout_marginRight="16dp"
                                 android:layout_marginBottom="10dp"
                                 android:textColor="@color/text"
                                 android:textSize="20dp"
@@ -106,15 +105,25 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="$ 761"
+                                android:text="$ 161"
                                 android:paddingHorizontal="20dp"
                                 android:layout_marginTop="17dp"
-                                android:layout_marginLeft="25dp"
+                                android:layout_marginLeft="20dp"
                                 android:layout_marginRight="15dp"
                                 android:layout_marginBottom="10dp"
                                 android:textColor="#0000cc"
                                 android:gravity="right"
                                 android:textSize="20dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Visa 15th Sep"
+                                android:layout_marginTop="17dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/text"
+                                android:textSize="15dp"
+                                />
                         </TableRow>
                         <View
                             android:layout_height="2dip"
@@ -123,10 +132,9 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Abc"
+                                android:text="James"
                                 android:paddingHorizontal="20dp"
                                 android:layout_marginTop="17dp"
-                                android:layout_marginRight="16dp"
                                 android:layout_marginBottom="10dp"
                                 android:textColor="#29293d"
                                 android:textSize="20dp"
@@ -134,7 +142,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="$ 761"
+                                android:text="$ 440"
                                 android:paddingHorizontal="20dp"
                                 android:layout_marginTop="17dp"
                                 android:layout_marginLeft="25dp"
@@ -143,6 +151,16 @@
                                 android:textColor="#0000cc"
                                 android:gravity="right"
                                 android:textSize="20dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Visa 3rd Sep"
+                                android:layout_marginTop="17dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="10dp"
+                                android:textColor="@color/text"
+                                android:textSize="15dp"
+                                />
                         </TableRow>
                         <View
                             android:layout_height="2dip"
@@ -151,7 +169,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="BCD"
+                                android:text="Bill"
                                 android:paddingHorizontal="20dp"
                                 android:layout_marginTop="17dp"
                                 android:layout_marginRight="16dp"
@@ -161,7 +179,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="$ 761"
+                                android:text="$ 800"
                                 android:paddingHorizontal="20dp"
                                 android:layout_marginTop="17dp"
                                 android:layout_marginLeft="25dp"
@@ -170,6 +188,16 @@
                                 android:textColor="#0000cc"
                                 android:gravity="right"
                                 android:textSize="20dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="17dp"
+                                android:layout_marginRight="16dp"
+                                android:layout_marginBottom="10dp"
+                                android:text="Rupay 15th Aug"
+                                android:textColor="@color/text"
+                                android:textSize="15dp" />
                         </TableRow>
                     </TableLayout>
                 </LinearLayout>
