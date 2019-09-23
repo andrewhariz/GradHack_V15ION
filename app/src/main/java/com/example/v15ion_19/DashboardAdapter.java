@@ -23,7 +23,7 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
     public DashboardAdapter(final List<ModelDashboard> models, final Context context) {
         this.models = models;
         this.context = context;
-        Log.v("size$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$","" + models.size());
+//        Log.v("size$$$$$$$$$$$$$$$","" + models.size());
     }
 
 
@@ -32,6 +32,9 @@ public class DashboardAdapter extends RecyclerView.Adapter<DashboardAdapter.MyVi
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View cardView = LayoutInflater.from(context).inflate(R.layout.card1, parent,false);
         MyViewHolder cvh = new MyViewHolder(cardView);
+        Log.i("viewType$$$$$$$$$$$",""+ viewType);
+        Log.v("viewType$$$$$$$$$$$",""+ viewType);
+        System.out.println(viewType);
         return cvh;
     }
 
