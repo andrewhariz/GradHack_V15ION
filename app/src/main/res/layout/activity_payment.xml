@@ -92,7 +92,7 @@
             android:textStyle="normal"
             android:textSize="50dp"
             android:textColor="#ffffff"
-            android:background="@drawable/round_rect_shape_c"
+            android:background="@drawable/round_rect_shape_b"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="40dp">
