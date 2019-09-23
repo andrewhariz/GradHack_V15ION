@@ -58,6 +58,42 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="5dp">
         </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/text"
+            android:layout_marginTop="8dp"
+            android:text="Frequent Contacts">
+        </TextView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp">
+            <ImageButton
+                android:layout_width="82dp"
+                android:layout_height="85dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/f1"></ImageButton>
+            <ImageButton
+                android:layout_width="82dp"
+                android:layout_height="85dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/f2"></ImageButton>
+            <ImageButton
+                android:layout_width="82dp"
+                android:layout_height="85dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/f3"></ImageButton>
+            <ImageButton
+                android:layout_width="82dp"
+                android:layout_height="85dp"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/f4"></ImageButton>
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -92,7 +128,7 @@
             android:textStyle="normal"
             android:textSize="50dp"
             android:textColor="#ffffff"
-            android:background="@drawable/round_rect_shape_c"
+            android:background="@drawable/round_rect_shape_b"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="40dp">
