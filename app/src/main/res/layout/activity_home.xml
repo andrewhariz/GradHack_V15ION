@@ -26,6 +26,22 @@
                 android:textColor="#29293d"
                 android:textSize="25dp">
             </ImageButton>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:id="@+id/plus_button"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/baseline_add_black_18dp"
+                    android:textColor="#29293d"
+                    >
+                </ImageButton>
+            </RelativeLayout>
             <ImageButton
                 android:id="@+id/settings"
                 android:layout_width="45dp"
@@ -64,6 +80,7 @@
                 android:textColor="@color/text"
                 android:fontFamily="sans-serif-black"
                 android:id="@+id/dashText"/>
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -232,17 +249,18 @@
                     android:text="Pay"
                     android:textColor="#ffffff"
                     android:textSize="17dp"></Button>
+
                 <Button
+                    android:id="@+id/services_button"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:paddingHorizontal="5dp"
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="3"
+                    android:background="@drawable/round_rect_shape_b"
+                    android:paddingHorizontal="5dp"
                     android:text="Services"
                     android:textColor="#ffffff"
-                    android:textSize="17dp"
-                    android:background="@drawable/round_rect_shape_b">
-                </Button>
+                    android:textSize="17dp"></Button>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
