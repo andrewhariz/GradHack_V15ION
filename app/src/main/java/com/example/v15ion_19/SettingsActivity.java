@@ -48,7 +48,7 @@ public class SettingsActivity extends AppCompatActivity {
         settings = findViewById(R.id.settings);
         contrastButton = findViewById(R.id.contrastButton);
         mainLayout = findViewById(R.id.settingsLayout);
-        dashText = findViewById(R.id.dashText);
+        dashText = findViewById(R.id.dash_text);
         highContrast = false;
         textSize = 12;
 

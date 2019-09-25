@@ -83,7 +83,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="40dp"
             android:background="@drawable/round_rect_shape_b"
-            android:text="HIGH CONTRAST"
+            android:text="High contrast"
             android:textColor="#fff" />
 
     </LinearLayout>

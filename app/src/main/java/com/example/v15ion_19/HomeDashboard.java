@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.example.v15ion_19.R;
 
@@ -25,6 +26,13 @@ public class HomeDashboard extends Activity {
     private ViewPager screenPager;
     PagerAdapter introViewPagerAdapter;
     int fontSize;
+
+    TextView dashText;
+    TextView welcomeText;
+    TextView transactionsText;
+    TextView transaction1Text;
+    TextView transaction2Text;
+    TextView transaction3Text;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +79,16 @@ public class HomeDashboard extends Activity {
 
         services = findViewById(R.id.services_button);
         plusButton = findViewById(R.id.plus_button);
+
+        // dashboard text items
+        dashText = findViewById(R.id.dash_text);
+        welcomeText = findViewById(R.id.welcome_message);
+        transactionsText = findViewById(R.id.transactions_text);
+        transaction1Text = findViewById(R.id.transaction1);
+        transaction2Text = findViewById(R.id.transaction2);
+        transaction3Text = findViewById(R.id.transaction3);
+
+
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,6 +96,16 @@ public class HomeDashboard extends Activity {
                 transfer.setTextSize(fontSize);
                 payment.setTextSize(fontSize);
                 services.setTextSize(fontSize);
+
+                // increment text sizes by 2
+                dashText.setTextSize(dashText.getTextSize() + 2);
+                welcomeText.setTextSize(welcomeText.getTextSize() + 2);
+                transactionsText.setTextSize(transactionsText.getTextSize() + 2);
+                transaction1Text.setTextSize(transaction1Text.getTextSize() + 2);
+                transaction2Text.setTextSize(transaction2Text.getTextSize() + 2);
+                transaction3Text.setTextSize(transaction3Text.getTextSize() + 2);
+
+
             }
         });
 

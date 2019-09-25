@@ -59,7 +59,6 @@ public class LoginSignup extends Activity {
                 startActivity(new Intent(LoginSignup.this, Register.class));
             }
         });
-
         highContrast = findViewById(R.id.high_contrast);
         highContrast.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -81,6 +80,7 @@ public class LoginSignup extends Activity {
                 usernameText.setTextColor(Color.GREEN);
             }
         });
+
 
     }
 
