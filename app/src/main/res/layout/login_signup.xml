@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.v15ion_19.MainActivity"
-    android:background="#E9E9E9">
+    android:background="#E9E9E9"
+    android:id="@+id/login_layout"
+    >
 
     <TextView
-        android:id="@+id/singup"
+        android:id="@+id/signup_upper_right"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -31,8 +33,7 @@
         android:textStyle="bold"
         android:gravity="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90dp"
-        ></TextView>
+        android:layout_marginTop="90dp" />
 
 
     <EditText
@@ -70,9 +71,19 @@
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="40dp"
             android:background="@drawable/round_rect_shape_b"
             android:text="Use fingerprint"
+            android:textColor="#fff" />
+
+        <Button
+            android:id="@+id/high_contrast"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="40dp"
+            android:background="@drawable/round_rect_shape_b"
+            android:text="HIGH CONTRAST"
             android:textColor="#fff" />
 
     </LinearLayout>

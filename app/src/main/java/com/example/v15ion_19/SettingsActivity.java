@@ -121,9 +121,13 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                /*
                 highContrast = true;
                 getApplication().setTheme(R.style.HighContrastTheme);
                 recreate();
+                 */
+                mainLayout.setBackgroundColor(Color.BLACK);
+                view2.setTextColor(Color.GREEN);
             }
         });
 
