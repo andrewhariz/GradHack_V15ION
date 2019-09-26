@@ -2,6 +2,7 @@ package com.example.v15ion_19;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.v15ion_19.R;
@@ -28,6 +30,7 @@ public class HomeDashboard extends Activity {
     static Button services;
     ImageButton minusButton;
     ImageButton plusButton;
+    ImageButton highContrastButton;
     private ViewPager screenPager;
     PagerAdapter introViewPagerAdapter;
     int fontSize;
@@ -39,6 +42,8 @@ public class HomeDashboard extends Activity {
     TextView transaction1Text;
     TextView transaction2Text;
     TextView transaction3Text;
+
+    LinearLayout background;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,8 +85,6 @@ public class HomeDashboard extends Activity {
                 startActivity(intent);
             }
         });
-
-        // TODO: change font size of all text, not just buttons
 
         services = findViewById(R.id.services_button);
         plusButton = findViewById(R.id.plus_button);
@@ -156,6 +159,46 @@ public class HomeDashboard extends Activity {
                 v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() - 20f);
                 v1 = findViewById(R.id.bal6);
                 v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() - 20f);
+
+
+            }
+        });
+        background = findViewById(R.id.fullscreen_content);
+        highContrastButton = findViewById(R.id.contrast_button);
+        highContrastButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                background.setBackgroundColor(Color.BLACK); // background black
+
+                welcomeText.setTextColor(Color.CYAN);
+                dashText.setTextColor(Color.CYAN);
+
+                transactionsText.setTextColor(Color.CYAN);
+                transaction1Text.setTextColor(Color.RED);
+                transaction2Text.setTextColor(Color.RED);
+                transaction3Text.setTextColor(Color.RED);
+
+                TextView balance1 = findViewById(R.id.bal1);
+                TextView balance2 = findViewById(R.id.bal2);
+                TextView balance3 = findViewById(R.id.bal3);
+                TextView balance4 = findViewById(R.id.bal4);
+                TextView balance5 = findViewById(R.id.bal5);
+                TextView balance6 = findViewById(R.id.bal6);
+
+                balance1.setTextColor(Color.GREEN);
+                balance2.setTextColor(Color.GREEN);
+                balance3.setTextColor(Color.GREEN);
+                balance4.setTextColor(Color.GREEN);
+                balance5.setTextColor(Color.GREEN);
+                balance6.setTextColor(Color.GREEN);
+
+                // buttons green, text black
+                transfer.setTextColor(Color.BLACK);
+                transfer.setBackgroundColor(Color.YELLOW);
+                payment.setTextColor(Color.BLACK);
+                payment.setBackgroundColor(Color.YELLOW);
+                services.setTextColor(Color.BLACK);
+                services.setBackgroundColor(Color.YELLOW);
 
 
             }

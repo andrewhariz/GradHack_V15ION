@@ -30,24 +30,35 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageButton
-                    android:id="@+id/plus_button"
+                    android:id="@+id/minus_button"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="140dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="16dp"
-                    android:background="@drawable/ic_add_box_black_24dp"
-                    android:textColor="#29293d"></ImageButton>
+                    android:background="@drawable/ic_indeterminate_check_box_black_24dp"
+                    android:textColor="#29293d"
+                    >
+                </ImageButton>
                 <ImageButton
-                    android:id="@+id/minus_button"
+                    android:id="@+id/plus_button"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
                     android:layout_marginStart="210dp"
                     android:layout_alignParentTop="true"
                     android:layout_marginEnd="16dp"
-                    android:background="@drawable/ic_indeterminate_check_box_black_24dp"
-                    android:textColor="#29293d"
-                    >
+                    android:background="@drawable/ic_add_box_black_24dp"
+                    android:textColor="#29293d">
+                </ImageButton>
+                <ImageButton
+                    android:id="@+id/contrast_button"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="280dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ic_add_box_black_24dp"
+                    android:textColor="#29293d">
                 </ImageButton>
             </RelativeLayout>
             <ImageButton

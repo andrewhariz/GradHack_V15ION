@@ -75,7 +75,7 @@
             android:background="@drawable/round_rect_shape_b"
             android:text="Use fingerprint"
             android:textColor="#fff" />
-
+        <!--
         <Button
             android:id="@+id/high_contrast"
             android:layout_width="230dp"
@@ -85,6 +85,7 @@
             android:background="@drawable/round_rect_shape_b"
             android:text="High contrast"
             android:textColor="#fff" />
+        -->
 
     </LinearLayout>
 </RelativeLayout>
