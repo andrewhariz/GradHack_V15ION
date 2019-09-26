@@ -98,15 +98,54 @@
                 android:layout_marginHorizontal="5dp"
                 android:background="@drawable/f4"></ImageButton>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clark"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rose"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alice"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jason"
+                android:textSize="25dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:layout_weight="1"></TextView>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Amount:     $"
-                android:textSize="25dp"
+                android:textSize="35dp"
                 android:layout_marginVertical="8dp"
                 android:inputType="number">
             </TextView>
