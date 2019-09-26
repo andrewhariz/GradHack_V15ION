@@ -2,7 +2,10 @@ package com.example.v15ion_19;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -13,6 +16,7 @@ import com.example.v15ion_19.R;
 import java.util.ArrayList;
 import java.util.List;
 
+import androidx.annotation.RequiresApi;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
@@ -22,6 +26,7 @@ public class HomeDashboard extends Activity {
     static Button transfer;
     static Button payment;
     static Button services;
+    ImageButton minusButton;
     ImageButton plusButton;
     private ViewPager screenPager;
     PagerAdapter introViewPagerAdapter;
@@ -29,6 +34,7 @@ public class HomeDashboard extends Activity {
 
     TextView dashText;
     TextView welcomeText;
+    TextView balance;
     TextView transactionsText;
     TextView transaction1Text;
     TextView transaction2Text;
@@ -79,6 +85,7 @@ public class HomeDashboard extends Activity {
 
         services = findViewById(R.id.services_button);
         plusButton = findViewById(R.id.plus_button);
+        minusButton = findViewById(R.id.minus_button);
 
         // dashboard text items
         dashText = findViewById(R.id.dash_text);
@@ -92,38 +99,66 @@ public class HomeDashboard extends Activity {
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fontSize += 2;
-                transfer.setTextSize(fontSize);
-                payment.setTextSize(fontSize);
-                services.setTextSize(fontSize);
 
-                // increment text sizes by 2
-                dashText.setTextSize(dashText.getTextSize() + 2);
-                welcomeText.setTextSize(welcomeText.getTextSize() + 2);
-                transactionsText.setTextSize(transactionsText.getTextSize() + 2);
-                transaction1Text.setTextSize(transaction1Text.getTextSize() + 2);
-                transaction2Text.setTextSize(transaction2Text.getTextSize() + 2);
-                transaction3Text.setTextSize(transaction3Text.getTextSize() + 2);
+                transfer.setTextSize(TypedValue.COMPLEX_UNIT_DIP,17f);
+                payment.setTextSize(TypedValue.COMPLEX_UNIT_DIP,17f);
+                services.setTextSize(TypedValue.COMPLEX_UNIT_DIP,17f);
 
+                // increment text sizes by 20 pixels
+                dashText.setTextSize(TypedValue.COMPLEX_UNIT_PX,dashText.getTextSize() + 20f);
+                welcomeText.setTextSize(TypedValue.COMPLEX_UNIT_PX,welcomeText.getTextSize() + 20f);
+                transactionsText.setTextSize(TypedValue.COMPLEX_UNIT_PX,transactionsText.getTextSize() + 20f);
+                transaction1Text.setTextSize(TypedValue.COMPLEX_UNIT_PX,transaction1Text.getTextSize() + 20f);
+                transaction2Text.setTextSize(TypedValue.COMPLEX_UNIT_PX,transaction2Text.getTextSize() + 20f);
+                transaction3Text.setTextSize(TypedValue.COMPLEX_UNIT_PX,transaction3Text.getTextSize() + 20f);
+                TextView v1 = findViewById(R.id.bal1);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() + 20f);
+                v1 = findViewById(R.id.bal2);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() + 20f);
+                v1 = findViewById(R.id.bal3);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() + 20f);
+                v1 = findViewById(R.id.bal4);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() + 20f);
+                v1 = findViewById(R.id.bal5);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() + 20f);
+                v1 = findViewById(R.id.bal6);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() + 20f);
 
             }
         });
 
-        // TODO: add minus button to xml file and fix layout
-
-        /*
-        minusButton = findViewById(R.id.minus_button);
         minusButton.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View v) {
-                fontSize -= 2;
-                transfer.setTextSize(fontSize);
-                payment.setTextSize(fontSize);
-                services.setTextSize(fontSize);
+//                fontSize -= 1;
+                transfer.setTextSize(TypedValue.COMPLEX_UNIT_DIP,17f);
+                payment.setTextSize(TypedValue.COMPLEX_UNIT_DIP,17f);
+                services.setTextSize(TypedValue.COMPLEX_UNIT_DIP,17f);
+
+                // decrement text sizes by 20 pixels
+                dashText.setTextSize(TypedValue.COMPLEX_UNIT_PX,dashText.getTextSize() - 20f);
+                welcomeText.setTextSize(TypedValue.COMPLEX_UNIT_PX,welcomeText.getTextSize() - 20f);
+                transactionsText.setTextSize(TypedValue.COMPLEX_UNIT_PX,transactionsText.getTextSize() - 20f);
+                transaction1Text.setTextSize(TypedValue.COMPLEX_UNIT_PX,transaction1Text.getTextSize() - 20f);
+                transaction2Text.setTextSize(TypedValue.COMPLEX_UNIT_PX,transaction2Text.getTextSize() - 20f);
+                transaction3Text.setTextSize(TypedValue.COMPLEX_UNIT_PX,transaction3Text.getTextSize() - 20f);
+
+                TextView v1 = findViewById(R.id.bal1);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() - 20f);
+                v1 = findViewById(R.id.bal2);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() - 20f);
+                v1 = findViewById(R.id.bal3);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() - 20f);
+                v1 = findViewById(R.id.bal4);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() - 20f);
+                v1 = findViewById(R.id.bal5);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() - 20f);
+                v1 = findViewById(R.id.bal6);
+                v1.setTextSize(TypedValue.COMPLEX_UNIT_PX,v1.getTextSize() - 20f);
+
+
             }
         });
-         */
-
-
     }
 }

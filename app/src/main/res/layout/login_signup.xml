@@ -67,7 +67,7 @@
             android:textColor="#fff" />
 
         <Button
-            android:id="@+id/signup"
+            android:id="@+id/fingerprint"
             android:layout_width="230dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

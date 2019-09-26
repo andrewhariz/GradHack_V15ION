@@ -28,16 +28,24 @@
             </ImageButton>
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="10dp">
+                android:layout_height="wrap_content">
                 <ImageButton
                     android:id="@+id/plus_button"
                     android:layout_width="45dp"
                     android:layout_height="45dp"
+                    android:layout_marginStart="140dp"
                     android:layout_alignParentTop="true"
-                    android:layout_centerInParent="true"
                     android:layout_marginEnd="16dp"
-                    android:background="@drawable/baseline_add_black_18dp"
+                    android:background="@drawable/ic_add_box_black_24dp"
+                    android:textColor="#29293d"></ImageButton>
+                <ImageButton
+                    android:id="@+id/minus_button"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="210dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ic_indeterminate_check_box_black_24dp"
                     android:textColor="#29293d"
                     >
                 </ImageButton>
@@ -54,220 +62,236 @@
                 android:textSize="25dp">
             </ImageButton>
         </RelativeLayout>
-        <LinearLayout
-            android:id="@+id/mainLayout"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:orientation="vertical"
-            android:paddingHorizontal="10dp">
-            <TextView
-                android:id="@+id/welcome_message"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Welcome back, Josh"
-                android:textSize="30dp"
-                android:fontFamily="sans-serif-thin"
-                android:textColor="@color/text"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="15dp"></TextView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dashboard"
-                android:textSize="25dp"
-                android:layout_marginVertical="5dp"
-                android:layout_marginLeft="5dp"
-                android:textColor="@color/text"
-                android:fontFamily="sans-serif-black"
-                android:id="@+id/dash_text"/>
-
-            <ScrollView
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <LinearLayout
+                android:id="@+id/mainLayout"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp">
+                <TextView
+                    android:id="@+id/welcome_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome back, Josh"
+                    android:textSize="35dp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/text"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dashboard"
+                    android:textSize="25dp"
+                    android:layout_marginVertical="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/text"
+                    android:fontFamily="sans-serif-black"
+                    android:id="@+id/dash_text"/>
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <androidx.viewpager.widget.ViewPager
+                            android:id="@+id/screen_viewpager"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/transactions_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transactions"
+                            android:textColor="@color/text"
+                            android:textSize="25dp"
+                            android:fontFamily="sans-serif"
+                            android:textStyle="bold"
+                            android:layout_marginVertical="10dp"></TextView>
+                        <HorizontalScrollView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:scrollbarAlwaysDrawHorizontalTrack="true">
+                            <TableLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:stretchColumns="2">
+                                <TableRow>
+
+                                    <TextView
+                                        android:id="@+id/transaction1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="17dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:paddingHorizontal="20dp"
+                                        android:text="GooglePay"
+                                        android:textColor="@color/text"
+                                        android:textSize="20dp" />
+                                    <TextView
+                                        android:id="@+id/bal1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="$ 161"
+                                        android:paddingHorizontal="20dp"
+                                        android:layout_marginTop="17dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:layout_marginRight="15dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:textColor="#0000cc"
+                                        android:gravity="right"
+                                        android:textSize="20dp"/>
+                                    <TextView
+                                        android:id="@+id/bal2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Visa 15th Sep"
+                                        android:layout_marginTop="17dp"
+                                        android:layout_marginRight="16dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:textColor="@color/text"
+                                        android:textSize="15dp"
+                                        />
+                                </TableRow>
+                                <View
+                                    android:layout_height="2dip"
+                                    android:background="#FF909090" />
+                                <TableRow>
+
+                                    <TextView
+                                        android:id="@+id/transaction2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="17dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:paddingHorizontal="20dp"
+                                        android:text="James"
+                                        android:textColor="#29293d"
+                                        android:textSize="20dp" />
+                                    <TextView
+                                        android:id="@+id/bal3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="$ 440"
+                                        android:paddingHorizontal="20dp"
+                                        android:layout_marginTop="17dp"
+                                        android:layout_marginLeft="25dp"
+                                        android:layout_marginRight="15dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:textColor="#0000cc"
+                                        android:gravity="right"
+                                        android:textSize="20dp"/>
+                                    <TextView
+                                        android:id="@+id/bal4"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Visa 3rd Sep"
+                                        android:layout_marginTop="17dp"
+                                        android:layout_marginRight="16dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:textColor="@color/text"
+                                        android:textSize="15dp"
+                                        />
+                                </TableRow>
+                                <View
+                                    android:layout_height="2dip"
+                                    android:background="#FF909090" />
+                                <TableRow>
+
+                                    <TextView
+                                        android:id="@+id/transaction3"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="17dp"
+                                        android:layout_marginRight="16dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:paddingHorizontal="20dp"
+                                        android:text="Bill"
+                                        android:textColor="#29293d"
+                                        android:textSize="20dp" />
+                                    <TextView
+                                        android:id="@+id/bal5"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="$ 800"
+                                        android:paddingHorizontal="20dp"
+                                        android:layout_marginTop="17dp"
+                                        android:layout_marginLeft="25dp"
+                                        android:layout_marginRight="15dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:textColor="#0000cc"
+                                        android:gravity="right"
+                                        android:textSize="20dp"/>
+
+                                    <TextView
+                                        android:id="@+id/bal6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="17dp"
+                                        android:layout_marginRight="16dp"
+                                        android:layout_marginBottom="10dp"
+                                        android:text="Rupay 15th Aug"
+                                        android:textColor="@color/text"
+                                        android:textSize="15dp" />
+                                </TableRow>
+                            </TableLayout>
+                        </HorizontalScrollView>
+                    </LinearLayout>
+                </ScrollView>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-                    <androidx.viewpager.widget.ViewPager
-                        android:id="@+id/screen_viewpager"
-                        android:orientation="horizontal"
-                        android:layout_width="match_parent"
-                        android:layout_height="170dp"
-                        />
+                    android:layout_height="250dp"
+                    android:paddingVertical="35dp"
+                    android:paddingHorizontal="15dp"
+                    android:layout_gravity="center">
 
-                    <TextView
-                        android:id="@+id/transactions_text"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Transactions"
-                        android:textColor="@color/text"
-                        android:textSize="25dp"
-                        android:fontFamily="sans-serif"
-                        android:textStyle="bold"
-                        android:layout_marginVertical="10dp"></TextView>
-                    <TableLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:stretchColumns="2">
-                        <TableRow>
+                    <Button
+                        android:id="@+id/transferButton"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/round_rect_shape_b"
+                        android:paddingHorizontal="5dp"
+                        android:text="Transfer"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"></Button>
 
-                            <TextView
-                                android:id="@+id/transaction1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginBottom="10dp"
-                                android:paddingHorizontal="20dp"
-                                android:text="GooglePay"
-                                android:textColor="@color/text"
-                                android:textSize="20dp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$ 161"
-                                android:paddingHorizontal="20dp"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginLeft="20dp"
-                                android:layout_marginRight="15dp"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#0000cc"
-                                android:gravity="right"
-                                android:textSize="20dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Visa 15th Sep"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="@color/text"
-                                android:textSize="15dp"
-                                />
-                        </TableRow>
-                        <View
-                            android:layout_height="2dip"
-                            android:background="#FF909090" />
-                        <TableRow>
+                    <Button
+                        android:id="@+id/PayButton"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/round_rect_shape_b"
+                        android:paddingHorizontal="5dp"
+                        android:text="Pay"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"></Button>
 
-                            <TextView
-                                android:id="@+id/transaction2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginBottom="10dp"
-                                android:paddingHorizontal="20dp"
-                                android:text="James"
-                                android:textColor="#29293d"
-                                android:textSize="20dp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$ 440"
-                                android:paddingHorizontal="20dp"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginLeft="25dp"
-                                android:layout_marginRight="15dp"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#0000cc"
-                                android:gravity="right"
-                                android:textSize="20dp"/>
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Visa 3rd Sep"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="@color/text"
-                                android:textSize="15dp"
-                                />
-                        </TableRow>
-                        <View
-                            android:layout_height="2dip"
-                            android:background="#FF909090" />
-                        <TableRow>
-
-                            <TextView
-                                android:id="@+id/transaction3"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="10dp"
-                                android:paddingHorizontal="20dp"
-                                android:text="Bill"
-                                android:textColor="#29293d"
-                                android:textSize="20dp" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="$ 800"
-                                android:paddingHorizontal="20dp"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginLeft="25dp"
-                                android:layout_marginRight="15dp"
-                                android:layout_marginBottom="10dp"
-                                android:textColor="#0000cc"
-                                android:gravity="right"
-                                android:textSize="20dp"/>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="17dp"
-                                android:layout_marginRight="16dp"
-                                android:layout_marginBottom="10dp"
-                                android:text="Rupay 15th Aug"
-                                android:textColor="@color/text"
-                                android:textSize="15dp" />
-                        </TableRow>
-                    </TableLayout>
+                    <Button
+                        android:id="@+id/services_button"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_weight="3"
+                        android:background="@drawable/round_rect_shape_b"
+                        android:paddingHorizontal="5dp"
+                        android:text="Services"
+                        android:textColor="#ffffff"
+                        android:textSize="17dp"></Button>
                 </LinearLayout>
-            </ScrollView>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:paddingVertical="35dp"
-                android:paddingHorizontal="15dp"
-                android:layout_gravity="center">
-
-                <Button
-                    android:id="@+id/transferButton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_weight="3"
-                    android:background="@drawable/round_rect_shape_b"
-                    android:paddingHorizontal="5dp"
-                    android:text="Transfer"
-                    android:textColor="#ffffff"
-                    android:textSize="17dp"></Button>
-
-                <Button
-                    android:id="@+id/PayButton"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_weight="3"
-                    android:background="@drawable/round_rect_shape_b"
-                    android:paddingHorizontal="5dp"
-                    android:text="Pay"
-                    android:textColor="#ffffff"
-                    android:textSize="17dp"></Button>
-
-                <Button
-                    android:id="@+id/services_button"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginHorizontal="10dp"
-                    android:layout_weight="3"
-                    android:background="@drawable/round_rect_shape_b"
-                    android:paddingHorizontal="5dp"
-                    android:text="Services"
-                    android:textColor="#ffffff"
-                    android:textSize="17dp"></Button>
             </LinearLayout>
-        </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 </FrameLayout>

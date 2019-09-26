@@ -97,7 +97,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                textSize += 2;
+                textSize += 4;
                 view2.setTextSize(textSize);
 
             }
@@ -108,7 +108,7 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                textSize -= 2;
+                textSize -= 4;
                 view2.setTextSize(textSize);
 
             }

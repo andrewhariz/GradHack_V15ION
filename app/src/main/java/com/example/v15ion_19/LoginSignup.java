@@ -52,8 +52,8 @@ public class LoginSignup extends Activity {
         });
 
 
-        signup = findViewById(R.id.signup);
-        signup.setOnClickListener(new View.OnClickListener() {
+
+        topSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(LoginSignup.this, Register.class));
