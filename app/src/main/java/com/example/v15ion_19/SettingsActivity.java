@@ -48,7 +48,7 @@ public class SettingsActivity extends AppCompatActivity {
         settings = findViewById(R.id.settings);
         contrastButton = findViewById(R.id.contrastButton);
         mainLayout = findViewById(R.id.settingsLayout);
-        dashText = findViewById(R.id.dashText);
+        dashText = findViewById(R.id.dash_text);
         highContrast = false;
         textSize = 12;
 
@@ -121,9 +121,13 @@ public class SettingsActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
+                /*
                 highContrast = true;
                 getApplication().setTheme(R.style.HighContrastTheme);
                 recreate();
+                 */
+                mainLayout.setBackgroundColor(Color.BLACK);
+                view2.setTextColor(Color.GREEN);
             }
         });
 

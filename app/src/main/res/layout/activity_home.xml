@@ -26,6 +26,22 @@
                 android:textColor="#29293d"
                 android:textSize="25dp">
             </ImageButton>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp">
+                <ImageButton
+                    android:id="@+id/plus_button"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/baseline_add_black_18dp"
+                    android:textColor="#29293d"
+                    >
+                </ImageButton>
+            </RelativeLayout>
             <ImageButton
                 android:id="@+id/settings"
                 android:layout_width="45dp"
@@ -46,6 +62,7 @@
             android:orientation="vertical"
             android:paddingHorizontal="10dp">
             <TextView
+                android:id="@+id/welcome_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Welcome back, Josh"
@@ -63,7 +80,8 @@
                 android:layout_marginLeft="5dp"
                 android:textColor="@color/text"
                 android:fontFamily="sans-serif-black"
-                android:id="@+id/dashText"/>
+                android:id="@+id/dash_text"/>
+
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -79,6 +97,7 @@
                         />
 
                     <TextView
+                        android:id="@+id/transactions_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Transactions"
@@ -92,16 +111,17 @@
                         android:layout_height="wrap_content"
                         android:stretchColumns="2">
                         <TableRow>
+
                             <TextView
+                                android:id="@+id/transaction1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="GooglePay"
-                                android:paddingHorizontal="20dp"
                                 android:layout_marginTop="17dp"
                                 android:layout_marginBottom="10dp"
+                                android:paddingHorizontal="20dp"
+                                android:text="GooglePay"
                                 android:textColor="@color/text"
-                                android:textSize="20dp"
-                                />
+                                android:textSize="20dp" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -129,16 +149,17 @@
                             android:layout_height="2dip"
                             android:background="#FF909090" />
                         <TableRow>
+
                             <TextView
+                                android:id="@+id/transaction2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="James"
-                                android:paddingHorizontal="20dp"
                                 android:layout_marginTop="17dp"
                                 android:layout_marginBottom="10dp"
+                                android:paddingHorizontal="20dp"
+                                android:text="James"
                                 android:textColor="#29293d"
-                                android:textSize="20dp"
-                                />
+                                android:textSize="20dp" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -166,16 +187,18 @@
                             android:layout_height="2dip"
                             android:background="#FF909090" />
                         <TableRow>
+
                             <TextView
+                                android:id="@+id/transaction3"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Bill"
-                                android:paddingHorizontal="20dp"
                                 android:layout_marginTop="17dp"
                                 android:layout_marginRight="16dp"
                                 android:layout_marginBottom="10dp"
+                                android:paddingHorizontal="20dp"
+                                android:text="Bill"
                                 android:textColor="#29293d"
-                                android:textSize="20dp"/>
+                                android:textSize="20dp" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -232,17 +255,18 @@
                     android:text="Pay"
                     android:textColor="#ffffff"
                     android:textSize="17dp"></Button>
+
                 <Button
+                    android:id="@+id/services_button"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
-                    android:paddingHorizontal="5dp"
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="3"
+                    android:background="@drawable/round_rect_shape_b"
+                    android:paddingHorizontal="5dp"
                     android:text="Services"
                     android:textColor="#ffffff"
-                    android:textSize="17dp"
-                    android:background="@drawable/round_rect_shape_b">
-                </Button>
+                    android:textSize="17dp"></Button>
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
