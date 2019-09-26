@@ -169,6 +169,7 @@ public class HomeDashboard extends Activity {
             @Override
             public void onClick(View view) {
                 background.setBackgroundColor(Color.BLACK); // background black
+                findViewById(R.id.top_bar).setBackgroundColor(Color.LTGRAY);
 
                 welcomeText.setTextColor(Color.CYAN);
                 dashText.setTextColor(Color.CYAN);
